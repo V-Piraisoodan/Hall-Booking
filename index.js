@@ -11,6 +11,11 @@ app.use(express.json());
 
 mongo.connect();
 
+app.use('/',(req,res)=>{
+    res.send('welcome to hall booking app')
+}
+
+)
 app.use('/hallBooking',BookingRouter);
 
 const port= process.env.PORT
